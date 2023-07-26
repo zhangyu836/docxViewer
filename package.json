@@ -1,0 +1,51 @@
+{
+  "name": "docxViewer",
+  "version": "0.0.5",
+  "description": "docxViewer",
+  "author": "Zhang Yu",
+  "license": "MIT",
+  "private": false,
+  "homepage": "https://zhangyu836.github.io/docxViewer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangyu836/docxViewer.git"
+  },
+  "files": [
+    "src",
+    "public",
+    "rollup.config.js"
+  ],
+  "keywords": [
+    "docx",
+    "docxjs",
+    "viewer"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.11.0",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.36.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-polyfill-node": "^0.11.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "serve": "^11.3.2",
+    "core-js": "^3.30.1"
+  },
+  "dependencies": {
+    "@zhangyu836/word-breaker": "1.1.2",
+    "konva": "^8.4.3",
+    "lil-gui": "^0.18.1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm-run-all --parallel start watch",
+    "start": "serve public"
+  }
+}
